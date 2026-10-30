@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#153f36">
+  <meta name="description" content="Universitet hayotidan chetda qolmang. Tadbirlarni toping, ro‘yxatdan o‘ting va tashabbusingizni hamjamiyat bilan ulashing.">
+  <title>Renesans — universitet tadbirlari</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Asosiy mazmunga o‘tish</a>
+  <div class="mobile-scrim" id="mobileScrim" hidden></div>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#events" aria-label="Renesans bosh sahifa">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M9 27V9h9a6 6 0 0 1 0 12h-9m9 0 9 6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m24 6 5 5" stroke="#cce2a1" stroke-width="3" stroke-linecap="round"/></svg></span>
+      <span>renesans<span class="brand-sub">TADBIRLAR PLATFORMASI</span></span>
+    </a>
+    <div class="workspace-label"><span class="university-symbol" data-icon="university"></span><span>Universitet hamjamiyati<small>Yangi imkoniyatlar shu yerda</small></span></div>
+    <p class="nav-label">ASOSIY</p>
+    <nav aria-label="Asosiy navigatsiya">
+      <a class="nav-link" href="#events" data-route="events"><span data-icon="grid"></span>Tadbirlar<span class="nav-active-dot"></span></a>
+      <a class="nav-link" href="#registrations" data-route="registrations"><span data-icon="ticket"></span>Mening ishtirokim<span class="nav-count" id="registrationCount">2</span></a>
+      <a class="nav-link" href="#calendar" data-route="calendar"><span data-icon="calendar"></span>Taqvim</a>
+      <a class="nav-link" href="#documents" data-route="documents"><span data-icon="file"></span>Hujjatlarim</a>
+    </nav>
+    <p class="nav-label nav-label-second">TASHABBUS VA BOSHQARUV</p>
+    <nav aria-label="Tashkilotchi navigatsiyasi">
+      <a class="nav-link" href="#create" data-route="create"><span data-icon="plus-square"></span>Tadbir taklif qilish</a>
+      <a class="nav-link" href="#review" data-route="review"><span data-icon="shield"></span>Tasdiqlash<span class="pending-dot" id="pendingDot"></span></a>
+    </nav>
+    <div class="sidebar-note">
+      <span class="note-icon" data-icon="sparkles"></span>
+      <strong>Yaxshi g‘oyangiz bormi?</strong>
+      <p>Keyingi katta tadbir sizning tashabbusingizdan boshlansin.</p>
+      <a href="#create">Tadbir taklif qiling <span data-icon="arrow-up-right"></span></a>
+    </div>
+    <div class="sidebar-bottom">
+      <a class="nav-link settings-nav" href="#settings" data-route="settings"><span data-icon="settings"></span>Sozlamalar</a>
+      <button class="profile-button" data-action="profile"><span class="avatar" id="sidebarAvatar">OO</span><span class="profile-copy"><strong id="sidebarName">Ozodbek Odilov</strong><small id="sidebarGroup">76-25-guruh · Talaba</small></span><span data-icon="chevrons"></span></button>
+      <button class="demo-info" data-action="about"><span class="status-dot"></span>Demo rejim <span data-icon="info"></span></button>
+    </div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topbar-left"><button class="icon-button mobile-menu" id="mobileMenu" aria-label="Menyuni ochish" aria-controls="sidebar" aria-expanded="false"><span data-icon="menu"></span></button><span class="breadcrumb"><span data-icon="home"></span><span class="breadcrumb-slash">/</span><span id="breadcrumbText">Tadbirlar</span></span></div>
+      <div class="topbar-right">
+        <span class="demo-badge">DEMO</span>
+        <label class="role-control"><span data-icon="user"></span><select id="roleSelect" aria-label="Demo rolini tanlang"><option value="student">Talaba</option><option value="organizer">Tashkilotchi</option><option value="admin">Mas’ul</option></select></label>
+        <button class="icon-button theme-toggle" id="themeToggle" data-action="toggle-theme" aria-label="Qora rejimga o‘tish" title="Qora rejimga o‘tish"><span data-icon="moon"></span></button>
+        <button class="icon-button notification-button" data-action="notifications" aria-label="Bildirishnomalar"><span data-icon="bell"></span><i id="notificationDot"></i></button>
+        <button class="avatar topbar-avatar" data-action="profile" id="topbarAvatar" aria-label="Profilni tahrirlash">OO</button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="page-footer"><span>© 2026 Renesans Tadbirlar</span><span>Barcha vaqtlar Toshkent vaqti bilan · UTC+5</span><button data-action="about">Platforma haqida <span data-icon="arrow-up-right"></span></button></footer>
+  </div>
+  <dialog id="appDialog" aria-labelledby="dialogTitle">
+    <div id="dialogContent"></div>
+  </dialog>
+  <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
